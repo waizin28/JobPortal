@@ -12,6 +12,7 @@ public class RecruiterProfile {
     @JoinColumn(name = "user_account_id")
     @MapsId
     private Users userId;
+
     private String firstName;
     private String lastName;
     private String city;
@@ -23,6 +24,10 @@ public class RecruiterProfile {
     private String profilePhoto;
 
     public RecruiterProfile() {
+    }
+
+    public RecruiterProfile(Users userId) {
+        this.userId = userId;
     }
 
     public RecruiterProfile(int userAccountId, Users userId, String firstName, String lastName, String city, String state, String country, String company, String profilePhoto) {
